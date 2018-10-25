@@ -31,7 +31,12 @@ type IgnResponse struct {
 }
 
 func main() {
-	setTimer()
+	if len(os.Args) == 2 {
+		setTimer()
+	} else {
+		print("Usage:\n")
+		print("      ./news <cellNumber>\n")
+	}
 }
 
 func setTimer() {
